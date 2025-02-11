@@ -1,0 +1,232 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* reseting the css */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-bg-color: #e9ebec;
+  --primary-active-btn-bg: #fbd144;
+  --primary-inactive-btn-bg: #ffffff;
+  --primary-text-color: #ffffff;
+  --theme-btn-bg: #fff;
+  font-size: 16px;
+}
+
+body {
+  background-color: var(--primary-bg-color);
+  color: var(--primary-text-color);
+  font-family: "Poppins";
+}
+
+/* header start */
+
+header {
+  display: flex;
+  justify-content: center;
+  padding: 2vh 0;
+}
+
+header svg {
+  padding: 10px;
+  background-color: var(--theme-btn-bg);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* main section start */
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8vw;
+}
+
+main .img-wrapper {
+  width: 320px;
+  height: 320px;
+  border: 6px solid var(--primary-active-btn-bg);
+  border-radius: 50%;
+  padding: 8px;
+}
+
+main .img-wrapper img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.name-wrapper {
+  font-size: 2.8rem;
+  font-weight: 500;
+}
+.role-wrapper {
+  font-weight: 500;
+  
+}
+
+.info-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.info-wrapper ul {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+/* about section */
+
+.about-info-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+  gap: 4vw;
+  text-align: center;
+}
+
+/* cv and contact section */
+
+.cv-contact-section {
+  display: flex;
+  justify-content: center;
+  gap: 2vw;
+  align-items: center;
+}
+
+.cv-contact-section a {
+  border: none;
+  height: 4rem;
+  width: 16rem;
+  border-radius: 0.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  cursor: pointer;
+
+  color: #000;
+  text-decoration: none;
+}
+
+.dowload-cv-btn {
+  background-color: var(--primary-active-btn-bg);
+}
+
+.contact-me-btn {
+  background-color: var(--theme-btn-bg);
+}
+
+/* portfolio and skills buttons */
+
+.portfolio-toggle-btns {
+  display: flex;
+  justify-content: center;
+  padding: 4rem;
+}
+
+.btns-wrapper {
+  padding: 0.6rem;
+  background-color: var(--theme-btn-bg);
+  border-radius: 0.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.btns-wrapper button {
+  height: 4rem;
+  width: 16rem;
+  border: none;
+  border-radius: 0.4rem;
+}
+
+.portfolio-btn {
+  background-color: #d7d7d7;
+}
+
+.skills-btn {
+  background-color: var(--theme-btn-bg);
+}
+
+/* project section */
+
+.projects-skills-section {
+  /* display: grid; */
+  grid-template-columns: 18rem 18rem;
+  grid-auto-rows: 12rem;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.project-card {
+  /* height: 12rem; */
+  /* width: 18rem; */
+}
+
+.projects-skills-section img {
+  height: 100%;
+  width: 100%;
+}
+
+/* footer */
+footer {
+  text-align: center;
+  padding: 2.8rem 0;
+}
+
+/* spline  */
+
+.spline-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -9999;
+  height: 100vh;
+  width: 100%;
+}
+
+/* hide and show code */
+
+.active {
+  display: grid;
+  justify-content: center;
+}
+
+.inactive {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    flex-direction: column;
+    gap: 4vw;
+  }
+  .info-wrapper {
+    align-items: center;
+    justify-content: center;
+  }
+  .active {
+    grid-template-columns: 420px;
+    gap: 4vh;
+    grid-auto-rows: 18rem;
+    padding: 0 1rem;
+    justify-content: center;
+  }
+  .btns-wrapper button,
+  .cv-contact-section a {
+    width: 10rem;
+  }
+}
